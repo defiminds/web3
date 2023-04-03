@@ -3,7 +3,16 @@
 use strict;
 use warnings;
 use Digest::SHA3 qw(sha3_256_hex);
-
+sub install_digest_sha3 {
+  eval {
+    require Digest::SHA3;
+    Digest::SHA3->import(qw(sha3_256_hex));
+  };
+  if ($@) {
+    print "Instalando o módulo Digest::SHA3...\n";
+    system("cpanm Digest::SHA3");
+  }
+}
 print "Gerando nova carteira Ethereum...\n";
 
 # Gera a chave privada usando OpenSSL

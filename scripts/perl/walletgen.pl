@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-
+# sudo apt install cpanminus
 use strict;
 use warnings;
 use Digest::SHA3 qw(sha3_256_hex);

@@ -13,6 +13,7 @@ sub install_digest_sha3 {
     system("cpanm Digest::SHA3");
   }
 }
+install_digest_sha3();
 print "Gerando nova carteira Ethereum...\n";
 
 # Gera a chave privada usando OpenSSL
